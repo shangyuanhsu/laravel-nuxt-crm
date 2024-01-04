@@ -24,5 +24,15 @@ generate the JWT
 php artisan jwt:secret
 ```
 
+4.
+cd my-vite
+```
+npm i
+```
+```
+npm run dev
+```
+```
+
 
 

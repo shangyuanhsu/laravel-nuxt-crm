@@ -2,5 +2,5 @@
 npm i
 ```
 ```
-npm reu dev
+npm run dev
 ```
