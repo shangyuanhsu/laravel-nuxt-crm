@@ -16,7 +16,7 @@
     </div>
 </template>
 
-<script  setup lang="ts">
+<script setup lang="ts">
 const route = useRoute();
 const navItem = reactive<GroupObject[]>([
     {
@@ -25,8 +25,12 @@ const navItem = reactive<GroupObject[]>([
         group: "groupTitle1",
         list: [
             {
-                title: 'index',
-                link: '/'
+                title: 'page1',
+                link: '/page1'
+            },
+            {
+                title: 'page2',
+                link: '/page2'
             },
         ]
     },

@@ -10,6 +10,12 @@ export default defineNuxtConfig({
       'common/**/*.d.ts'
     ]
   },
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    }
+  ],
   build: {
     transpile: ['vuetify'],
   },
