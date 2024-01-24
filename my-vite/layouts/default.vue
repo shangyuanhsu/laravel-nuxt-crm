@@ -11,9 +11,8 @@
             <div class="setBar">
                 <v-app-bar-nav-icon @click="drawer = !drawer">
                 </v-app-bar-nav-icon>
-                <UserNavbar />
+                <NuxtLink to="/userSetting"><UserNavbar /></NuxtLink>
             </div>
-
         </v-app-bar>
         <v-main>
             <div class="showMain">
@@ -44,7 +43,7 @@
 }
 
 .setBar {
-    border: 1px solid red;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
