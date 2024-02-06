@@ -11,7 +11,9 @@
             <div class="setBar">
                 <v-app-bar-nav-icon @click="drawer = !drawer">
                 </v-app-bar-nav-icon>
-                <NuxtLink to="/userSetting"><UserNavbar /></NuxtLink>
+                <NuxtLink to="/userSetting">
+                    <UserNavbar />
+                </NuxtLink>
             </div>
         </v-app-bar>
         <v-main>
@@ -21,6 +23,14 @@
         </v-main>
     </v-app>
 </template>
+
+<script setup>
+
+import { ref } from 'vue';
+const drawer = ref(null);
+
+</script>
+
 <style scoped>
 .nav {
     display: grid;
@@ -49,7 +59,3 @@
     justify-content: space-between;
 }
 </style>
-<script setup>
-import { ref } from 'vue'
-const drawer = ref(null)
-</script>
