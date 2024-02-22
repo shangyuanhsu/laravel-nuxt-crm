@@ -6,7 +6,7 @@
   </section>
 </template>
 
-<script setup="ts">
+<script setup lang="ts">
 useSeoMeta({
   title: "my index",
   description: "my index",

@@ -1,20 +1,22 @@
 <template>
-    <div class="loading" :class="{ 'show': isLoading }">
-   
+    <div class="loading" :class="{ 'show': loadingStore.isLoading }">
+        <v-progress-circular indeterminate :size="70" :width="7"></v-progress-circular>
     </div>
 </template>
   
-<script setup>
+<script setup lang="ts">
+
+const loadingStore = useLoadingStore();
 const nuxtApp = useNuxtApp();
-const isLoading = ref(false);
+
 
 nuxtApp.hook('page:start', () => {
-    isLoading.value = true;
+    loadingStore.setLoading(true);
 });
 
 nuxtApp.hook('page:finish', () => {
     setTimeout(() => {
-        isLoading.value = false;
+        loadingStore.setLoading(false);
     }, 500);
 });
 </script>
@@ -29,11 +31,15 @@ nuxtApp.hook('page:finish', () => {
     left: 0;
     right: 0;
     background-color: rgba(70, 69, 69, 0.363);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
 }
 
 .show {
     opacity: 1;
-    z-index: 1005;
+    z-index: 1007;
     transition: opacity 0.2s ease-in-out;
 }
 </style>

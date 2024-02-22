@@ -1,6 +1,6 @@
 <template>
     <footer>
-            copyright © 2023 shang 
+            copyright © 2024 shang 
     </footer>
 </template>
 <script setup="ts">
