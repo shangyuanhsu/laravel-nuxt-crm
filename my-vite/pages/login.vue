@@ -4,14 +4,14 @@
             <h2> Sign in to your account</h2>
             <form>
                 <p>Email address</p>
-                <SetForm type="email"/>
+                <v-text-field variant="outlined" type="text"></v-text-field>
                 <p>Password</p>
-                <input type="password">
+                <v-text-field variant="outlined" type="password"></v-text-field>
             </form>
         </div>
     </div>
 </template>
-<script setup="ts">
+<script setup lang="ts">
 definePageMeta({
     layout: false // no default layout
 })
@@ -27,7 +27,6 @@ definePageMeta({
 }
 
 .login>div {
-    /* border: 1px solid gray; */
     width: 100%;
     max-width: 600px;
     min-height: 80vh;
